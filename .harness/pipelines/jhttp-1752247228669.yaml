@@ -27,20 +27,18 @@ pipeline:
                   timeout: ""
                   type: Run
               - step:
-                  identifier: dockerbuild
-                  name: docker_build
+                  type: BuildAndPushDockerRegistry
+                  name: BuildAndPushDockerRegistry_2
+                  identifier: BuildAndPushDockerRegistry_2
                   spec:
-                    caching: true
-                    connectorRef: <+input>
-                    repo: hello/world
+                    connectorRef: account.EC_Registry_Docker_Connector
+                    repo: frozenapollo/jhttpa
                     tags:
                       - latest
-                  timeout: ""
-                  type: BuildAndPushDockerRegistry
           platform:
-            arch: Amd64
             os: Linux
+            arch: Arm64
           runtime:
+            type: Docker
             spec: {}
-            type: Cloud
         type: CI
