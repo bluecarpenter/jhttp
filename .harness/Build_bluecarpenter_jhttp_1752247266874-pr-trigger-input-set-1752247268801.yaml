@@ -1,0 +1,14 @@
+inputSet:
+  name: Build_bluecarpenter_jhttp_1752247266874-pr-trigger-input-set
+  identifier: Build_bluecarpenter_jhttp_1752247266874prtriggerinputset
+  orgIdentifier: default
+  projectIdentifier: default_project
+  pipeline:
+    identifier: Build_bluecarpenter_jhttp_1752247266874
+    properties:
+      ci:
+        codebase:
+          build:
+            type: PR
+            spec:
+              number: <+trigger.prNumber>
