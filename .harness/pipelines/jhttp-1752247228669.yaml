@@ -36,7 +36,7 @@ pipeline:
                     tags:
                       - latest
           platform:
-            os: Linux
+            os: MacOS
             arch: Arm64
           runtime:
             type: Docker
