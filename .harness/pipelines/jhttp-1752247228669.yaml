@@ -37,6 +37,15 @@ pipeline:
                       - latest
                   timeout: ""
                   type: BuildAndPushDockerRegistry
+              - step:
+                  type: BuildAndPushDockerRegistry
+                  name: BuildAndPushDockerRegistry_2
+                  identifier: BuildAndPushDockerRegistry_2
+                  spec:
+                    connectorRef: Docker_Registry_EC
+                    repo: jhttpa
+                    tags:
+                      - latest
           platform:
             arch: Amd64
             os: Linux
