@@ -27,17 +27,6 @@ pipeline:
                   timeout: ""
                   type: Run
               - step:
-                  identifier: dockerbuild
-                  name: docker_build
-                  spec:
-                    caching: true
-                    connectorRef: <+input>
-                    repo: hello/world
-                    tags:
-                      - latest
-                  timeout: ""
-                  type: BuildAndPushDockerRegistry
-              - step:
                   type: BuildAndPushDockerRegistry
                   name: BuildAndPushDockerRegistry_2
                   identifier: BuildAndPushDockerRegistry_2
